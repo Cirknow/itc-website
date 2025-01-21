@@ -1,4 +1,3 @@
-
 /* Default Styles */
 /* General Reset */
 * {
@@ -19,10 +18,10 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Full width for the navbar background */
-  background: rgba(0, 0, 0, 0.7); /* Transparent dark background */
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); 
   padding: 10px 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   z-index: 1000; /* Ensure the navbar is above other elements */
 }
 
