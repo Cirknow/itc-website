@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll("nav ul li a, .header a");
   const sections = document.querySelectorAll("section, header");
