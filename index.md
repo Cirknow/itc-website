@@ -1,6 +1,6 @@
 # Welcome to My Space 🚀
 
-I’m **[Your Name]**, a lost IT student who does not know what to do. I build solutions... and problems. 
+I’m **Penta**, a lost IT student who does not know what to do. I build solutions... and problems. 
 
 ---
 
