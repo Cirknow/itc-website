@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <header class="header" id="home">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <h1>Your Business Name</h1>
+            <p>Your business tagline or description goes here.</p>
+            <a href="#about">Learn More &#8595;</a>
+        </header>
+    </div>
+
+    <section class="about-section" id="about">
+        <div class="about-image">
+            <img src="images/talking.jpg" alt="About Image">
+        </div>
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>Describe your business, its mission, and what makes it special here.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service">
+                <img src="images/car1.jpg" alt="Service 1">
+                <h3>Service 1</h3>
+                <p>Brief description of service 1.</p>
+            </div>
+            <div class="service">
+                <img src="images/car2.jpg" alt="Service 2">
+                <h3>Service 2</h3>
+                <p>Brief description of service 2.</p>
+            </div>
+            <div class="service">
+                <img src="images/car3.jpg" alt="Service 3">
+                <h3>Service 3</h3>
+                <p>Brief description of service 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="contact-left">
+            <h3>Contact Us</h3>
+            <h1>Your Business Name</h1>
+            <p><strong>Address:</strong> 123 Business Street, Business City</p>
+            <p><strong>Email:</strong> contact@business.com</p>
+            <p><strong>Phone:</strong> +123-456-7890</p>
+        </div>
+        <div class="contact-form">
+            <!-- working form with free backend at formspree -->
+            <form action="https://formspree.io/f/mkggdewy" method="POST" id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" id="email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+                <p id="form-message" style="display: none; color: green; margin-top: 10px;">Your message has been sent successfully!</p>
+            </form>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
