@@ -1,13 +1,13 @@
 /* Default Styles */
-/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Poppins, sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Poppins, sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
   background-color: #f4f4f4;
@@ -28,7 +28,7 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: flex-end; /* Align links to the right */
+  justify-content: flex-end;
   margin: 0;
 }
 
@@ -71,19 +71,21 @@ nav ul li a.active::after {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-              url('images/cars.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('images/cover.jpg') center/cover no-repeat;
   color: white;
   text-align: center;
 }
 
 .header h1 {
   font-size: 3rem;
+  margin: 0 10px;
 }
 
 .header p {
-  margin: 20px 0;
-  font-size: 1.2rem;
+  margin: 10px 20px;
+  font-size: 1rem;
+  font-style: italic;
 }
 
 .header a {
@@ -103,15 +105,20 @@ nav ul li a.active::after {
   height: 100vh;
   align-items: center;
   padding: 50px;
-  background: #f4f4f4;
+  background: #f0d8d8;
 }
 
 .about-image {
   flex: 1;
+  width: 100%;
+  height: 80%;
+  margin-left: 80px auto;
 }
 
 .about-image img {
   width: 100%;
+  height: 130%;
+  aspect-ratio: 1/1;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -143,6 +150,7 @@ h2 {
 .service {
   flex: 1;
   max-width: 30%;
+  max-height: 100%;
   text-align: center;
   border: 1px solid #ddd;
   padding: 20px;
@@ -152,14 +160,17 @@ h2 {
 
 .service img {
   max-width: 100%;
+  max-height: 100%;
   border-radius: 5px;
   margin-bottom: 10px;
+  aspect-ratio: 1/1;
+  mask-image: linear-gradient(180deg, transparent 0%, black 0%, black 50%, transparent 100%);
 }
 
 #contact {
   display: flex;
   padding: 50px;
-  background: #f4f4f4;
+  background: linear-gradient(90deg, #9bc8f8 50%, #ffffff 100%);
   justify-content: space-between;
 }
 
@@ -176,6 +187,10 @@ h2 {
 .contact-left h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+}
+
+p1 {
+  margin-left: 60.5px;
 }
 
 .contact-form {
@@ -244,12 +259,30 @@ form button:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .header {
+    height: 100dvh;
+    padding: 20px;
+}
+
+  .header h1 {
+    font-size: 1.5rem;
+}
+
+  .header p {
+    font-size: 0.9rem;
+}
+
   .about-section {
     flex-direction: column;
+    height: 10%
   }
 
   .about-text {
     padding-left: 0;
+  }
+
+  .about-image {
+    mask-image: linear-gradient(180deg, black 40%, transparent 100%);
   }
 
   .services-container {
@@ -262,11 +295,22 @@ form button:hover {
 
   #contact {
     flex-direction: column;
+    background: linear-gradient(180deg, #62a7f1 50%, #ffffff 100%);
   }
 
   .contact-left,
   .contact-form {
     padding: 0;
     margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-image {
+    mask-image: linear-gradient(90deg, black 30%, transparent 90%);
+    max-width: 100%;
+  }
+  .about-image img {
+    max-width: 90%;
   }
 }
