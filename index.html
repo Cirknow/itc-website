@@ -5,6 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Website</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        @media (max-width: 768px) {
+            .services-container {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+            .service {
+                max-width: 90%;
+                margin-bottom: 20px;
+            }
+
+            #services {
+                height: auto;
+                padding: 20px 0;
+            }
+
+            #contact {
+                padding: 20px;
+            }
+
+            .contact-left, .contact-form {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -16,7 +43,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    
+
     <!-- Header section -->
     <header class="header" id="home">
         <h1>Chlouie's Delight</h1>
@@ -55,15 +82,15 @@
         </div>
     </section>
 
-    <footer id="contact">
+    <section id="contact">
+        <h2>Contact Us</h2>
         <div class="contact-left">
-            <h3>Contact Us</h3>
+            <h3>Get in Touch</h3>
             <h1>Chlouie's Delight</h1>
             <p><strong>Address:</strong> Ph.3A Blk.19 Lot 23 Libya st. Tierra monte silangan San Mateo Rizal</p>
-            <p><strong>Email:</strong> mr.mcquenabellano@gmail.com
-            </p>
+            <p><strong>Email:</strong> mr.mcquenabellano@gmail.com</p>
             <p><strong>Phone:</strong> 0939-971-4216</p>
-            <p1> 0998-100-0126</p1>
+            <p>0998-100-0126</p>
         </div>
         <div class="contact-form">
             <!-- working form with free backend at formspree -->
@@ -75,7 +102,7 @@
                 <p id="form-message" style="display: none; color: green; margin-top: 10px;">Your message has been sent successfully!</p>
             </form>
         </div>
-    </footer>
+    </section>
 
     <script src="scripts.js"></script>
 </body>
