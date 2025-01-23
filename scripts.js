@@ -1,11 +1,12 @@
+// Update for "scripts.js"
 document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll("nav ul li a, .header a");
   const sections = document.querySelectorAll("section, header");
   const form = document.getElementById("contact-form");
-  const emailInput = document.getElementById("email"); // Email input field
+  const emailInput = document.getElementById("email"); 
   const message = document.getElementById("form-message");
 
-  const ZEROBOUNCE_API_KEY = "b21226e0fe014941a70746f5766808d1"; // Replace with your actual API key
+  const ZEROBOUNCE_API_KEY = "b21226e0fe014941a70746f5766808d1";
 
   // Smooth scrolling and active link handling
   links.forEach(link => {
@@ -41,6 +42,23 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   sections.forEach(section => observer.observe(section));
+
+  // Scroll to "Contact" when fully in view
+  const contactSection = document.querySelector("#contact");
+  const servicesLink = document.querySelector("nav ul li a[href='#services']");
+  const contactLink = document.querySelector("nav ul li a[href='#contact']");
+
+  const contactObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Move active class from Services to Contact
+        servicesLink.classList.remove("active");
+        contactLink.classList.add("active");
+      }
+    });
+  }, { threshold: 1.0 }); // Full view
+
+  contactObserver.observe(contactSection);
 
   // Email verification with ZeroBounce
   async function verifyEmail(email) {
@@ -85,4 +103,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
