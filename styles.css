@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Grestal Script';
+  src: url(local-fonts/grestal-script/Grestal\ Script\ Demo.ttf);
+}
+
 /* Default Styles */
 * {
   margin: 0;
@@ -140,13 +145,15 @@ nav ul li a.active::after {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/cover.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/cover.jpg') center/cover no-repeat;
   color: white;
   text-align: center;
 }
 
 .header h1 {
-  font-size: 3rem;
+  font-family: 'Grestal Script', sans-serif;
+  font-size: 8vw;
+  font-weight: 100;
   margin: 0 10px;
 }
 
@@ -260,6 +267,23 @@ nav ul li a.active::after {
   display: none;
 }
 
+.fb-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.fb-link ion-icon {
+  font-size: 3rem;  
+  vertical-align: middle;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.fb-link:hover {
+  color: #0d65d9; 
+}
+
 .contact-form {
   flex: 1;
   padding-left: 20px;
@@ -348,6 +372,7 @@ form button:hover {
     margin: 0px;
     padding: 30px;
   }
+
 }
 
 @media (max-width: 425px) {
@@ -369,7 +394,7 @@ form button:hover {
     flex-direction: column;
     position: fixed;
     top: 0;
-    right: -100%; /* Initially hidden off-screen */
+    right: -100%; 
     width: 50vw;
     height: 100dvh;
     background: linear-gradient(rgba(70, 70, 70, 0.7), rgba(0, 0, 0, 0.7));
@@ -379,11 +404,11 @@ form button:hover {
     padding: 20px;
     align-items: flex-start;
     justify-content: flex-start;
-    transition: right 0.4s ease-in-out; /* Smooth slide animation */
+    transition: right 0.4s ease-in-out;
   }
 
   .nav-links.show {
-    right: 0; /* Slide into view */
+    right: 0;
   }
 
   nav .logo2 img {
@@ -400,12 +425,24 @@ form button:hover {
     flex-direction: column;
   }
 
+  .header h1 {
+    font-size: 10vw;
+    font-weight: lighter;
+  }
+
   .contact-text {
     display: none;
   }
 
   #contact {
     padding: 25px;
+  }
+
+  .contact-left h1 {
+    font-size: 8vw;
+    white-space: nowrap;
+    overflow: hidden;  
+    text-overflow: ellipsis;
   }
 
   .contact-left .contact-icon {
@@ -430,10 +467,6 @@ form button:hover {
  .header {
     height: 100dvh;
     padding: 20px;
-}
-
-  .header h1 {
-    font-size: 1.5rem;
 }
 
   .header p {
