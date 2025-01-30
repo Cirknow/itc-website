@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelector(".nav-links");
   const logo = document.querySelector("nav .logo")
 
-  const ZEROBOUNCE_API_KEY = "b21226e0fe014941a70746f5766808d1";
+  const ZEROBOUNCE_API_KEY = "57375b07c4fd474b8c56cbd2501dfb4b";
 
   // Smooth scrolling and active link handling
   links.forEach(link => {
@@ -104,12 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const email = emailInput.value;
 
     // Verify email before proceeding
-    const isEmailValid = await verifyEmail(email);
-
-    if (!isEmailValid) {
-      alert("The email address is invalid. Please provide a valid email.");
-      return;
-    }
+    const isEmailValid = true;
 
     // Proceed with submission if email is valid
     const formData = new FormData(form);
